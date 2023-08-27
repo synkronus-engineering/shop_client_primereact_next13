@@ -1,0 +1,114 @@
+.btnRed {
+  background: $colorBgRed;
+  color: $colorFontWhite !important;
+  border: 1px solid $colorBgRed;
+}
+
+.btnGrey {
+  background: #c8e6c9;
+  color: $colorBgGrey;
+}
+
+.btnBlack {
+  background: $colorBgBlack;
+  color: $colorFontWhite !important;
+  border: 1px solid $colorBgBlack;
+}
+
+.lablelBlack {
+  color: $colorBgBlack;
+}
+
+.lablelRed {
+  color: $colorBgRed;
+}
+
+.cartShop {
+  font-size: 1.7rem !important;
+  cursor: pointer !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: var(--text-color-secondary);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    color: var(--text-color);
+    background-color: var(--surface-hover);
+  }
+}
+
+.p-sidebar-header {
+  justify-content: space-between;
+  border-bottom: 1px var(--surface-300);
+  padding: 1rem !important;
+}
+
+.item-steps-app {
+  cursor: pointer;
+}
+.item-steps-line {
+  position: absolute;
+  border-top: 1px solid #dee2e6 !important;
+  width: 80% !important;
+  margin-top: 1.5rem !important;
+}
+
+.p-avatar.p-avatar-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.p-panelmenu .p-panelmenu-header > a {
+  border: none;
+}
+.p-panelmenu .p-panelmenu-content {
+  border: none;
+}
+
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:focus {
+  box-shadow: none;
+  background: #e0e0e0;
+}
+
+.p-inputnumber-button-up {
+  color: black !important;
+  background: white !important;
+  border: none !important;
+}
+
+.p-inputnumber-button-down {
+  color: black !important;
+  background: white !important;
+  border: none !important;
+}
+
+.p-autocomplete-input {
+  width: 100% !important;
+}
+
+.p-calendar {
+  min-height: 33px !important;
+}
+
+.p-datepicker table td > span {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.inputCatFilter > input {
+  width: 110px !important;
+}
+
+.p-avatar.p-avatar-lg {
+  width: 2.3rem !important;
+  height: 2.3rem !important;
+}
+
+.p-avatar-text {
+  align-self: normal !important;
+}
