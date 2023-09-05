@@ -1,6 +1,7 @@
 'use client';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
+import { APP_CFG_REST_URLS } from 'lib/res_definitions';
 import { useSupabaseApp } from 'providers/SupabaseProvider';
 
 const LoginPage = () => {
@@ -13,6 +14,7 @@ const LoginPage = () => {
       theme="default"
       providers={['google']}
       socialLayout="horizontal"
+      redirectTo={`${APP_CFG_REST_URLS.BASE_URL}`}
       localization={{ variables: { ...authOptionCfg } }}
     />
   );
