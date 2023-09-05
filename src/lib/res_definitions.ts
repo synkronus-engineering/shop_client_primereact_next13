@@ -44,6 +44,13 @@ export const APP_CFG_REST_URLS = {
   BASE_URL_BUCKET: process.env.NEXT_PUBLIC_BASE_URL_BUCKET,
 };
 
+export const APP_CFG_BUCKET_ATTACHMENTS = {
+  BASE_STORAGE: 'storage/v1/object/public',
+  PRODUCTS_BUCKET: 'products',
+  BLOG_ARTICLES: 'blog',
+  LANDING_SECTIONS: 'landing-page',
+};
+
 export const getEntryParams = (searchParams: URLSearchParams): any => {
   let objVals = {};
   searchParams.forEach((v, k) => (objVals[k] = v));
