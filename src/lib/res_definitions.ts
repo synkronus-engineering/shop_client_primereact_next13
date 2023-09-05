@@ -41,12 +41,10 @@ export const RESPONSE_ERRORS = {
   METHOD_NOT_ALLOW: 'Method not allow',
 };
 
-const getBaseUrlByEnv = () => (process.env.NEXT_PUBLIC_DEV_ENV == 'local' ? process.env.NEXT_PUBLIC_BASE_API_URL : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`);
-
 export const APP_CFG_REST_URLS = {
-  BASE_URL: getBaseUrlByEnv(),
+  BASE_URL: process.env.NEXT_PUBLIC_BASE_API_URL,
   BASE_URL_BUCKET: process.env.NEXT_PUBLIC_BASE_URL_BUCKET,
-  REDIRECT_URL: `${getBaseUrlByEnv()}/${process.env.NEXT_PUBLIC_WOMPI_REDIRECT_URL}`,
+  REDIRECT_URL: `${process.env.NEXT_PUBLIC_BASE_API_URL}/${process.env.NEXT_PUBLIC_WOMPI_REDIRECT_URL}`,
   WOMPI_URL_API: process.env.NEXT_PUBLIC_WOMPI_URL_API,
   WOMPI_URL_WIDGET: process.env.NEXT_PUBLIC_WOMPI_URL_WIDGET,
   WOMPI_PUBLIC_KEY: process.env.NEXT_PUBLIC_WOMPI_PUBLIC_KEY,
