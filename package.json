@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "pretty-quick",
-    "ts-lint": "tsc --noEmit --incremental"
+    "ts-lint": "tsc --noEmit --incremental",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@supabase/auth-helpers-nextjs": "^0.7.2",
