@@ -15,23 +15,11 @@ type DataTableProps = {
   header: any;
 };
 
-const DynamicTable = ({
-  dataSet,
-  columns,
-  isLoading,
-  header,
-}: DataTableProps) => {
+const DynamicTable = ({ dataSet, columns, isLoading, header }: DataTableProps) => {
   const dynamicColumns = map(columns, (col, i) => <Column key={i} {...col} />);
 
   return (
-    <DataTable
-      value={dataSet}
-      header={header}
-      loading={isLoading ?? false}
-      scrollable
-      responsiveLayout="scroll"
-      scrollHeight="300px"
-    >
+    <DataTable value={dataSet} header={header} loading={isLoading ?? false} scrollable scrollHeight="300px">
       {dynamicColumns}
     </DataTable>
   );

@@ -1,16 +1,7 @@
-import { API_STATUS, RESPONSE_API_REST } from 'lib/res_definitions';
+import { handleError } from 'lib/res_definitions';
 import { createServerRouteClient } from 'lib/supabase';
-import { get } from 'lodash';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
-
-function handleError(error: any): RESPONSE_API_REST {
-  return {
-    data: null,
-    status: API_STATUS.SERVER_ERROR,
-    error: get(error, 'message', 'server error'),
-  };
-}
 
 export async function GET(req: Request) {
   const todosTbl = createServerRouteClient(cookies).from('todos');
