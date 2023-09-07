@@ -17,7 +17,10 @@ In this course we will focus on the framework showcase with the creation of an o
   - Support tickets
   - Favorites list
 
-And much more!
+And much more!, you may check the deployments here:
+
+- https://moviltec-dev.vercel.app
+- https://moviltec-prod.vercel.app or https://moviltec.com.co
 
 When you are finished with the course, you’ll have the skills and knowledge necessary to build real world React applications that manage typical data scenarios found in both small home grown web site projects, as well as full enterprise applications.
 
