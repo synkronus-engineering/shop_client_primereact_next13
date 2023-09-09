@@ -1,9 +1,10 @@
+import HeroBanner from '@page-sections/landing/HeroBanner';
 
 const Page = async () => {
   return (
-    <div className="surface-0 flex justify-content-center">
+    <div className="surface-0  justify-content-center">
       <div className="landing-wrapper overflow-hidden">
-        Main content...
+        <HeroBanner />
       </div>
     </div>
   );
