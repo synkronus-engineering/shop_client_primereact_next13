@@ -1,16 +1,28 @@
 import { ImageElm } from 'components/image/ImageCmp';
+import { filter, first } from 'lodash';
+import Link from 'next/link';
+import { getProductLinkRedirect } from 'utils/product-operations';
 
-const HeroBanner = () => {
+const HeroBanner = ({ dataSet }) => {
+  const mainBanner = first(filter(dataSet, ['landing_section.code', 'landing_main_carousel']));
+
   return (
     <div className="grid grid-nogutter surface-section text-800 ">
       <div className="col-12 md:col-9 mobileActiveShowNone px-1">
         <div className="grid align-items-center px-4">
           <div className="col-8 nested-grid text-center md:text-left align-items-center mobileActiveShowNone">
             <section>
-              <span className="uppercase block text-3xl font-bold mb-1">sub_title</span>
-              <div className="uppercase text-6xl font-bold my-2">title</div>
-              <span className="uppercase block text-2xl font-bold my-2 lablelRed">discount</span>
-              <p className="mt-0 mb-4 text-900 text-xl line-height-3">description</p>
+              <span className="uppercase block text-3xl font-bold mb-1">{mainBanner?.sub_title}</span>
+              <div className="uppercase text-6xl font-bold my-2">{mainBanner?.title}</div>
+              <span className="uppercase block text-2xl font-bold my-2 lablelRed">{mainBanner?.discount}</span>
+              <p className="mt-0 mb-4 text-900 text-xl line-height-3">{mainBanner?.description}</p>
+              <Link
+                href={getProductLinkRedirect(mainBanner?.product)}
+                passHref
+                className="capitalize p-button p-button-rounded p-button-raised text-xl border-none mt-3 font-normal line-height-3 px-3  btnBlack"
+              >
+                {mainBanner?.btn_label}
+              </Link>
             </section>
           </div>
           <div className="col-4 overflow-hidden flex justify-content-end ">

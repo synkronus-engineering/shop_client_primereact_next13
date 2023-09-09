@@ -1,5 +1,5 @@
 import { getUnixTime } from 'date-fns';
-import { join, omit, slice, toLower, toUpper, trim, truncate, upperFirst } from 'lodash';
+import { first, get, join, omit, orderBy, slice, toLower, toUpper, trim, truncate, upperFirst } from 'lodash';
 
 export const toUpperFirstCase = (phrase: string | undefined) => {
   return upperFirst(toLower(phrase));
@@ -46,4 +46,10 @@ export const truncateWord = (str: string, lengthStr?: number, separatorStr?: str
     length: lengthStr,
     separator: separatorStr || ' ',
   });
+};
+
+export const getCurrentStatusFn = (item: any, op: string) => {
+  const trackingStatusList = get(item, ['tracking'], []);
+  const result = first(orderBy(trackingStatusList, ['updated_at'], ['desc']));
+  return get(result, ['process_status', op], '');
 };
