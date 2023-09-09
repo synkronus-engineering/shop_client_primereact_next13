@@ -1,10 +1,11 @@
 import { ImageElm } from 'components/image/ImageCmp';
+import { ILandingCfg, ILandingCfgExt, LANDING_SECTIONS } from 'data/types/app_types';
 import { filter, first } from 'lodash';
 import Link from 'next/link';
 import { getProductLinkRedirect } from 'utils/product-operations';
 
-const HeroBanner = ({ dataSet }) => {
-  const mainBanner = first(filter(dataSet, ['landing_section.code', 'landing_main_carousel']));
+const HeroBanner = ({ dataSet }: { dataSet: ILandingCfg[] }) => {
+  const mainBanner = first(filter(dataSet, ['landing_section.code', LANDING_SECTIONS.BANNER_HERO])) as ILandingCfgExt;
 
   return (
     <div className="grid grid-nogutter surface-section text-800 ">
