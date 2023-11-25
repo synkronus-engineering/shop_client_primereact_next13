@@ -4,13 +4,13 @@ export type Row<T extends keyof Database['public']['Tables']> = Database['public
 export type InsertDto<T extends keyof Database['public']['Tables']> = Database['public']['Tables'][T]['Insert'];
 export type UpdateDto<T extends keyof Database['public']['Tables']> = Database['public']['Tables'][T]['Update'];
 
-export type IToDos = Row<'todos'>;
-export type IProducts = Row<'products'>;
-export type IProductImages = Row<'product_images'>;
+export type IToDo = Row<'todos'>;
+export type IProduct = Row<'products'>;
+export type IProductImage = Row<'product_images'>;
 export type ILandingCfg = Row<'landing_top_cfg'>;
 
 export type ILandingCfgExt = ILandingCfg & {
-  product: IProducts;
+  product: IProduct;
 };
 
 export const LANDING_SECTIONS = {
